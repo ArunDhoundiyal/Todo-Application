@@ -1,0 +1,32 @@
+
+GET http://localhost:5000/todos/?priority=LOW&status=DONE&search_q=Play
+
+###
+
+GET http://localhost:5000/todos/2/
+###
+
+POST http://localhost:5000/todos/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+###
+
+PUT http://localhost:5000/todos/1/
+Content-Tpye: application/json
+
+{
+ "todo": "Some task",
+ "priority": "HIGH",
+ "status": "DONE"
+}
+
+###
+
+DELETE http://localhost:5000/todos/2/
